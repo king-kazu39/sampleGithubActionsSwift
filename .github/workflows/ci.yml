@@ -58,12 +58,13 @@ jobs:
         run: xcodebuild -version
 
       - name: Test
-        run: xcodebuild clean test -project sampleGithubActionsSwift.xcodeproj/ -scheme sampleGithubActionsSwift -resultBundlePath TestResults -sdk iphonesimulator -destination "${destination}"
+        run: xcodebuild clean test -project sampleGithubActionsSwift.xcodeproj/ -scheme sampleGithubActionsSwift -resultBundlePath "${iPhone}TestResults" -sdk iphonesimulator -destination "${destination}"
         env:
          destination: ${{ matrix.destination }}
+         iPhone: ${{ matrix.iPhone }}
         
       - uses: kishikawakatsumi/xcresulttool@v1.3.0
         with:
           path: |
-            results/${{ matrix.iPhone }}/TestResults.xcresult
+            results/${{ matrix.iPhone }}TestResults.xcresult
         if: success() || failure()
