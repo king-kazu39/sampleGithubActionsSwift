@@ -22,6 +22,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # ソースコードをcheckout
       - uses: actions/checkout@v2
+      # Xcode 13.2.1 を使う
+      - name: Select Xcode version
+        run: sudo xcode-select -s '/Applications/Xcode_13.2.1.app/Contents/Developer'
       - name: Show Xcode version
         run: xcodebuild -version
       # シミュレーター向けにビルド
