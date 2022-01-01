@@ -57,7 +57,7 @@ jobs:
         run: xcodebuild -version
 
       - name: Test
-        run: xcodebuild test -project sampleGithubActionsSwift.xcodeproj/ -scheme sampleGithubActionsSwift -resultBundlePath TestResults -sdk iphonesimulator
+        run: xcodebuild clean test -project sampleGithubActionsSwift.xcodeproj/ -scheme sampleGithubActionsSwift -resultBundlePath TestResults -sdk iphonesimulator -destination "${destination}"
         env:
          destination: ${{ matrix.destination }}
         
