@@ -43,11 +43,6 @@ jobs:
 
     runs-on: macos-latest
     
-    strategy:
-      matrix:
-        iPhone: [13, 12, 11, X, 8]
-        destination: ['platform=iOS Simulator,name=iPhone 13','platform=iOS Simulator,name=iPhone 12','platform=iOS Simulator,name=iPhone 11','platform=iOS Simulator,name=iPhone X','platform=iOS Simulator,name=iPhone 8']
-
     steps:
       - uses: actions/checkout@v2
       
@@ -58,13 +53,9 @@ jobs:
         run: xcodebuild -version
 
       - name: Test
-        run: xcodebuild clean test -project sampleGithubActionsSwift.xcodeproj/ -scheme sampleGithubActionsSwift -resultBundlePath "${iPhone}TestResults" -sdk iphonesimulator -destination "${destination}"
-        env:
-         destination: ${{ matrix.destination }}
-         iPhone: ${{ matrix.iPhone }}
-        
+        run: xcodebuild test -project sampleGithubActionsSwift.xcodeproj/ -scheme sampleGithubActionsSwift -resultBundlePath TestResults -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 8"
+
       - uses: kishikawakatsumi/xcresulttool@v1.3.0
         with:
-          path: |
-            results/${{ matrix.iPhone }}TestResults.xcresult
+          path: TestResults.xcresult
         if: success() || failure()
