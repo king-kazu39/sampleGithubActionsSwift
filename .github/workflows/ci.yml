@@ -45,6 +45,7 @@ jobs:
     
     strategy:
       matrix:
+        iPhone: [13, 12, 11, X, 8]
         destination: ['platform=iOS Simulator,name=iPhone 13','platform=iOS Simulator,name=iPhone 12','platform=iOS Simulator,name=iPhone 11','platform=iOS Simulator,name=iPhone X','platform=iOS Simulator,name=iPhone 8']
 
     steps:
@@ -63,5 +64,6 @@ jobs:
         
       - uses: kishikawakatsumi/xcresulttool@v1.3.0
         with:
-          path: TestResults.xcresult
+          path: |
+            results/${{ matrix.iPhone }}/TestResults.xcresult
         if: success() || failure()
