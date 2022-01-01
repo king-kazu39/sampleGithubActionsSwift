@@ -8,7 +8,7 @@
 import XCTest
 @testable import sampleGithubActionsSwift
 
-class sampleGithubActionsSwiftTests: XCTestCase {
+class SampleGithubActionsSwiftTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -25,19 +25,19 @@ class sampleGithubActionsSwiftTests: XCTestCase {
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
-    
+
     func testCounterPlus() throws {
         var counter = Counter()
         counter.plus()
         XCTAssertEqual(counter.count, 1)
     }
-    
+
     func testCounterMinus() throws {
         var counter = Counter()
         counter.minus()
         XCTAssertEqual(counter.count, -1)
     }
-    
+
     func testCounterReset() throws {
         var counter = Counter()
         counter.plus()
