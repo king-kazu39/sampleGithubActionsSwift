@@ -25,6 +25,26 @@ class sampleGithubActionsSwiftTests: XCTestCase {
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
+    
+    func testCounterPlus() throws {
+        var counter = Counter()
+        counter.plus()
+        XCTAssertEqual(counter.count, 1)
+    }
+    
+    func testCounterMinus() throws {
+        var counter = Counter()
+        counter.minus()
+        XCTAssertEqual(counter.count, -1)
+    }
+    
+    func testCounterReset() throws {
+        var counter = Counter()
+        counter.plus()
+        counter.minus()
+        counter.reset()
+        XCTAssertEqual(counter.count, 0)
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

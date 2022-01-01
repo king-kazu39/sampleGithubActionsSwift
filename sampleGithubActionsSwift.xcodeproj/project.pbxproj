@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5729C3427807EB0001D0697 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5729C3327807EB0001D0697 /* Counter.swift */; };
 		E5B6535027803B9E0018F39A /* sampleGithubActionsSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B6534F27803B9E0018F39A /* sampleGithubActionsSwiftApp.swift */; };
 		E5B6535227803B9E0018F39A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B6535127803B9E0018F39A /* ContentView.swift */; };
 		E5B6535427803BA00018F39A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5B6535327803BA00018F39A /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E5729C3327807EB0001D0697 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		E5B6534C27803B9E0018F39A /* sampleGithubActionsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleGithubActionsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B6534F27803B9E0018F39A /* sampleGithubActionsSwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleGithubActionsSwiftApp.swift; sourceTree = "<group>"; };
 		E5B6535127803B9E0018F39A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				E5B6535127803B9E0018F39A /* ContentView.swift */,
 				E5B6535327803BA00018F39A /* Assets.xcassets */,
 				E5B6535527803BA00018F39A /* Preview Content */,
+				E5729C3327807EB0001D0697 /* Counter.swift */,
 			);
 			path = sampleGithubActionsSwift;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				E5B6535227803B9E0018F39A /* ContentView.swift in Sources */,
 				E5B6535027803B9E0018F39A /* sampleGithubActionsSwiftApp.swift in Sources */,
+				E5729C3427807EB0001D0697 /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
