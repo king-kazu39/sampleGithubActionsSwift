@@ -53,7 +53,7 @@ jobs:
         run: xcodebuild -version
 
       - name: Test
-        run: xcodebuild test -project sampleGithubActionsSwift.xcodeproj/ -scheme sampleGithubActionsSwift -resultBundlePath TestResults -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 8"
+        run: xcodebuild test -project sampleGithubActionsSwift.xcodeproj/ -scheme sampleGithubActionsSwift -resultBundlePath TestResults -sdk iphonesimulator
 
       - uses: kishikawakatsumi/xcresulttool@v1.3.0
         with:
