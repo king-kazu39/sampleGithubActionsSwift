@@ -146,6 +146,8 @@
 			dependencies = (
 			);
 			name = sampleGithubActionsSwift;
+			packageProductDependencies = (
+			);
 			productName = sampleGithubActionsSwift;
 			productReference = E5B6534C27803B9E0018F39A /* sampleGithubActionsSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +220,8 @@
 				Base,
 			);
 			mainGroup = E5B6534327803B9E0018F39A;
+			packageReferences = (
+			);
 			productRefGroup = E5B6534D27803B9E0018F39A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
